@@ -314,7 +314,7 @@ passport.use('local', new LocalStrategy(async function verify(username, password
 passport.use('google', new GoogleStrategy({
   clientID: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-  callbackURL: "http://localhost:3000/auth/google/home",
+  callbackURL: "https://adventure-atlas-git-main-parths-projects-95a435c7.vercel.app/auth/google/home",
   userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
 }, async (accessToken, refreshToken, profile, cb) => {
   try {
