@@ -1,0 +1,240 @@
+:root{
+    --text : rgb(0, 95, 204);
+    --width: 300px;
+}
+.login{
+    width: var(--width);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-color: white;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input:focus{
+    outline: none;
+}
+a{
+    text-decoration: none;
+    color: var(--text);
+}
+h1{
+    margin: 2rem 0rem;
+    text-align: center;
+    font-size: 28px;
+}
+.inp_btns{
+    border: black solid 0.5px;
+    border-radius: 4px;
+    padding: 0.8rem;
+    width: var(--width);
+    font-size: 15px;
+    cursor: pointer;
+}
+.user input{
+    margin-bottom: 1rem;
+}
+.pass{
+    font-size: 15px;
+    background-color: white;
+    cursor: pointer;
+    align-items: center;
+}
+.pass input{
+    margin-top: 1rem;
+}
+#ct_user,#ct_pass{
+    background-color: var(--text);
+    border: none;
+    color: white;
+    margin: 1rem 0rem;
+    text-align: center;
+}
+#ct_pass{
+    margin-top: 0rem;
+}
+#ct_user:hover,#ct_pass:hover{
+    background-color: rgb(1, 120, 255);
+}
+#ct_pass{
+    margin-bottom: 1rem;
+    display: none;
+}
+.email , .pass ,.user{
+    position: relative;
+}
+.email span,.pass span,.user span{
+    position: absolute;
+    font-size: 15px;
+    color: var(--text);
+    cursor: pointer;
+}
+.email span{
+    top:30%;
+    right:5%;
+    display: none;
+}
+.user span{
+    display: none;
+    top:22%;
+    right: 4.5%;
+}
+.password{
+    margin-bottom: 1rem;
+}
+.pass span{
+    top:37%;
+    right:3%;
+}
+.pass i{
+    border: none;
+    padding: 0.5rem;
+    font-size: 15px;
+    border-radius: 50%;
+}
+.pass i:hover{
+    background-color: lightgray;
+}
+.email input:focus,.pass input:focus{
+    border-color:var(--text);
+}
+.password{
+    display: none;
+}
+.email p,.pass p,.user p{
+    display: none;
+    color: var(--text);
+    padding: 0.2rem;
+    border: none;
+    font-size: 15px;
+    position: absolute;
+}
+.user p{
+    top:-20%;
+    left:2.5%;
+}
+.email p{
+    top: -28%;
+    left: 2.5%;
+}
+.pass p{
+    top:5%;
+    left:2.5%;
+}
+.forgot p{
+    font-size: 14px;
+    width: 300px;
+    margin: 1rem 0rem;
+}
+.signup{
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+.invalid_email,.empty_password,.empty_user{
+    font-size: 13px;
+    color: red;
+    margin-top: 0.5rem;
+    display: none;
+}
+.invalid_email p ,.empty_password p,.empty_user p{
+    width: var(--width);
+}
+.invalid_email i,.empty_password i,.empty_user i{
+    margin-right: 0.3rem;
+}
+.empty_user{
+    margin-bottom: 1rem;
+}
+#or{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#or hr{
+    width: 130px;
+}
+#or p{
+    margin:1rem;
+    font-size: 12px;
+}
+.login_options{
+    display: flex;
+    flex-direction: column;
+}
+.login_options button{
+    margin-top: 1rem;
+    text-align: left;
+}
+.login_options button:hover{
+    background-color: rgb(236, 236, 236);
+}
+.login_options img{
+    margin-right: 1rem;
+    color: var(--text);
+    width: 18px;
+    background:none;
+}
+.login_options i{
+    font-size: 20px;
+    margin-right: 1.1rem;
+    background: none;
+}
+.policy{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    width: var(--width);
+    margin: 2rem 0rem;
+}
+.policy a{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.instructions p{
+    display: none;
+    margin: 1rem 0rem;
+    width: var(--width);
+    padding: 0.5rem 1rem;
+    border: black solid 0.5px;
+    border-radius: 5px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.instructions i{
+    margin-right: 0.5rem;
+}
+.check{
+    color:red;
+}
+@media screen and (max-width:500px) {
+    body{
+        align-items: flex-start;
+    }
+    .login{
+        margin-top: 2rem;
+    }
+    .policy{
+        margin: 1.5rem 0rem;
+    }
+    #img {
+        margin: 0;
+        width: 65px;
+    }
+    h1{
+        margin: 1rem 0rem;
+        font-size: 26px;
+    }
+}
+@media screen and (max-width:350px) {
+    :root{
+        --width: 280px;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <link rel='stylesheet' href='signup.css'>
+        <title>Sign Up</title>
+    </head>
+<body>
+    <body>
+        <div class="login">
+            <h1>Create your Account!</h1>
+            <form action="/user_signup" method="POST" id="signupform">
+            <div class="user">
+                <p>Username</p>
+                <input type="text" placeholder="Username" class="inp_btns" name="name">
+                <span>Edit</span>
+            </div>
+            <div class="empty_user"><p><i class="fa-solid fa-circle-exclamation"></i> Enter a Username!</p></div>
+    
+            <div class="email">
+                <p>Email Address</p>
+                <input type="email" placeholder="Email Address" class="inp_btns" name="email">
+                <span>Edit</span>
+            </div>
+            <div class="invalid_email"><p><i class="fa-solid fa-circle-exclamation"></i> Email is not valid!</p></div>
+    
+            <div class="password">
+                <div class="pass">
+                    <p>Password</p>
+                    <input type="password" placeholder="Password" class="inp_btns" name="password">
+                    <span><i class="fa-solid fa-eye-slash" id="hide"></i></span>
+                </div>
+                <div class="empty_password"><p><i class="fa-solid fa-circle-exclamation"></i> Enter a Password!</p></div>
+            </div>
+            <input type="hidden" name="username" id="hiddenUsername">
+            <input type="hidden" name="email_id" id="hiddenEmail">
+            <div class="inp_btns" id="ct_user">Continue</div>
+            <div class="instructions"><p>Your password must contain: <br><span class="check"><i class="fa-solid fa-xmark"></i> At least 12 characters</span></p></div>
+            <button class="inp_btns" id="ct_pass">Continue</button>
+            </form>
+            <div class="signup"><p>Already have an account? <a href="/login">Login</a></p></div>
+            <div id="or"><hr><p>OR</p><hr></div>
+    
+            <div class="login_options">
+                <a href="/auth/google"><div><button class="inp_btns"><img src="/images/google.png">Continue with Google</button></div></a>
+            </div>
+            <div class="policy"><a href="/terms">Terms of Use</a> | <a href="/privacy">Privacy Policy</a></div>
+        </div>
+        <script src="https://kit.fontawesome.com/22905693d1.js" crossorigin="anonymous"></script>
+        <script src="signup.js"></script>
+    </body>    
+</body>
+</html>

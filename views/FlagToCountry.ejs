@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Country</title>
+  <link rel="stylesheet" href="/FlagToCountry.css">
+  <link rel="stylesheet" href="Header.css">
+</head>
+<body>
+  <div class="nav">
+    <a href="/">
+        <div class="logo">
+            <i class="fa-solid fa-earth-americas"></i>
+            <p>ADVENTURE ATLAS</p>
+        </div>
+    </a>
+    <div class="menu-icon" onclick="toggleDropdown()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="nav_options">
+        <a href="/TravelTracker"><div class="option">Travel Tracker</div></a>
+        <a href="/#discover"><div class="option">Games</div></a>
+    </div>
+  </div>
+  <div class="dropdown" id="dropdownMenu">
+      <a href="/TravelTracker">Travel Tracker</a>
+      <a href="/#discover">Games</a>
+  </div>
+<div id="main">
+  <h1 id="heading">Guess The Country</h1>
+  <form class="ctr" action="/FlagToCountryGuess" method="post">
+    <div class="score">
+      <h3 id="score1">Total Score:
+        <span><%= locals.totalScore ? totalScore : "0" %></span>
+      </h3>
+      <h3 id="score2">Best Score:
+        <span><%= locals.BestScore ? BestScore : "0" %></span>
+      </h3>
+    </div>
+    <h1 id="countryFlag"><%=question.flag %></h1>
+    <div class="answer">
+      <input type="text" name="answer" id="userInput" placeholder="Name the country" autofocus autocomplete="off">
+      <button type="submit">SUBMIT
+        <% if(locals.wasCorrect){ %>
+            <span class="checkmark">✔</span>
+          <% } else if (locals.wasCorrect===false) { %>
+            <span class="cross" id="error">✖</span>
+        <% } %>
+      </button>
+    </div>
+  </form>
+</div>
+  <script>
+    var wasCorrect = "<%= locals.wasCorrect %>";
+    console.log(wasCorrect)
+    if (wasCorrect === "false") {
+      alert('Game over! Final best score: <%= locals.totalScore %>');
+      document.querySelector("body").innerHTML = '<a href="/FlagToCountry" class="restart-button">Restart</a>'
+    }
+    function toggleDropdown() {
+            var dropdown = document.getElementById("dropdownMenu");
+            dropdown.classList.toggle("show");
+        }
+        window.onclick = function (event) {
+            if (!event.target.matches('.menu-icon') && !event.target.matches('.menu-icon *')) {
+                var dropdowns = document.getElementsByClassName("dropdown");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+  </script>
+  <script src="https://kit.fontawesome.com/22905693d1.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

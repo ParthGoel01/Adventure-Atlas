@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <link rel='stylesheet' href='login.css'>
+        <title>Login In</title>
+    </head>
+<body>
+    <div class="login">
+        <h1>Welcome Back!</h1>
+        <form id="loginform" method="POST" action="/user_login">
+        <div class="email">
+            <p>Email Address</p>
+            <input type="email" placeholder="Email Address" class="inp_btns" name="email">
+            <span>Edit</span>
+        </div>
+        <div class="invalid_email"><p><i class="fa-solid fa-circle-exclamation"></i> Email is not valid.</p></div>
+        <div class="inp_btns" id="ct_user">Continue</div>
+
+        <div class="password ">
+            <div class="pass">
+                <p>Password</p>
+                <input type="password" placeholder="Password" class="inp_btns" name="password">
+                <span><i class="fa-solid fa-eye-slash" id="hide"></i></span>
+            </div>
+            <div class="empty_password"><p><i class="fa-solid fa-circle-exclamation"></i> Enter a Password!</p></div>
+            <div class="forgot"><p>Forgot Password?</p></div>
+        </div>
+        <input type="hidden" name="username" id="hiddenEmail">
+        <button class="inp_btns" id="ct_pass">Continue</button>
+        </form> 
+        <div class="signup"><p>Don't have an account? <a href="/signup">Sign Up</a></p></div>
+        <div id="or"><hr><p>OR</p><hr></div>
+
+        <div class="login_options">
+            <a href="/auth/google"><div><button class="inp_btns"><img src='/images/google.png'>Continue with Google</button></div></a>
+        </div>
+        <div class="policy"><a href="/terms">Terms of Use</a> | <a href="/privacy">Privacy Policy</a></div>
+    </div>
+    <script src="https://kit.fontawesome.com/22905693d1.js" crossorigin="anonymous"></script>
+    <script src="login.js"></script>
+</body>
+</html>

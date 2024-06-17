@@ -1,0 +1,148 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+input:focus{
+  outline: none;
+}
+body {
+  background-image: url("https://coolbackgrounds.io/images/backgrounds/white/white-triangle-369b8d2d.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.ctr {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  height: 50%;
+  min-height: 400px;
+  min-width: 400px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.score{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#score1{
+  margin-right: 1rem;
+}
+#main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#heading{
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  text-decoration: underline;
+}
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+.answer {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  text-align: center;
+  width: 70%;
+  min-width: 200px;
+  margin: 10px auto;
+  padding: 0.5rem;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  min-width: 200px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 16px;
+  display: block;
+  width: 70%;
+  padding: 0.5rem;
+  background-color: rgb(0, 95, 204);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #f88783;
+}
+#result {
+  text-align: center;
+  font-size: 24px;
+}
+.checkmark {
+  color: transparent;
+  animation: checkmark 0.5s ease;
+}
+.cross {
+  color: transparent;
+  animation: cross 0.5s ease;
+}
+@keyframes checkmark {
+0% {
+  color: transparent;
+}
+100% {
+  color: green;
+}
+}
+@keyframes cross {
+0% {
+  color: transparent;
+}
+100% {
+  color: red;
+}
+}
+.restart-button {
+  display: inline-block;
+  background-color: #fff;
+  color: #333;
+  padding: 15px 30px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+@media screen and (max-width:450px) {
+  .ctr{
+  min-width: 90vw;
+  }
+  h1{
+    font-size: 2rem;
+  }
+  #heading{
+    font-size: 1.5rem;
+  }
+  input , button{
+  min-width: 120px;
+  font-size: 14px;
+  }
+  }
